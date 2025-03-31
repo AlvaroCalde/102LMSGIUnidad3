@@ -14,6 +14,18 @@
         <a href="/">Enlace</a>
     </div>
     <script>
+        const body = document.querySelector('body')
+        const app=document.querySelector('body').childNodes.length
+        console.log('Número de nodos hijo',app)
+        const app1=document.querySelector('body').children          
+        console.log("Lista de nodos hijos:", app1);
+        console.log("Nodo padre de <body>:", body.parentNode);
+        var appElement = document.getElementById("app");
+        if (appElement) {
+            console.log("Lista de hijos del elemento con id 'app':", appElement.children);
+        } else {
+            console.log("No se encontró el elemento con el id app.");
+        }  
     </script>
 </body>
 </html>

@@ -30,5 +30,27 @@
             <div>Esto es un desplegable que está colapsado.</div>
         </details>
     </div>
+    <script>
+
+        const container = document.querySelector('.container'); 
+        const strongTag = document.querySelector('strong'); 
+        const markTag = document.querySelector('mark'); 
+        const hiddenParagraphs = document.querySelectorAll('p[hidden]');
+        const detailsElement = document.querySelector('details'); 
+        
+        container.firstElementChild.textContent = 'Hola a todos. Bienvenidos al ejemplo de DOM.';
+        
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = 'Nuevo mensaje de prueba.';
+        container.appendChild(newParagraph);
+       
+        strongTag.textContent = 'Araceli';
+        
+        markTag.style.display = 'block';
+        
+        hiddenParagraphs.forEach(paragraph => paragraph.removeAttribute('hidden'));
+
+        detailsElement.open = true;
+    </script>
 </body>
 </html>
